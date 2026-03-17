@@ -5,7 +5,7 @@
   margin-bottom: 20px;
 }
 
-.controlsContainer button {
+.button {
   padding: 8px 16px;
   background-color: #2d89ef;
   color: white;
@@ -16,13 +16,6 @@
   transition: 0.2s;
 }
 
-.controlsContainer button:hover {
+.button:hover {
   background-color: #1b5fab;
-}
-
-.controlsContainer input {
-  padding: 8px 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  width: 200px;
 }

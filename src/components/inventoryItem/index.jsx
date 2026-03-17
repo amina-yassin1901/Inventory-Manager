@@ -3,19 +3,31 @@ function InventoryItem({ item, onDeleteItem, onUpdateQuantity }) {
   const isLow = item.quantity < 5;
   return (
     <li className={isLow ? styles.low : ""}>
-      <h2>Name: {item.name}</h2>
-      <p>Category: {item.category}</p>
+      <h2 className={styles.title}>Name: {item.name}</h2>
+      <p className={styles.text}>Category: {item.category}</p>
 
-      <div>
-        <p>Quantity: {item.quantity}</p>
-        <div>
-          <button onClick={() => onUpdateQuantity(item.id, -1)}>-</button>
-          <button onClick={() => onUpdateQuantity(item.id, 1)}>+</button>
+      <div className={styles.quantityBtn}>
+        <p className={styles.text}>Quantity: {item.quantity}</p>
+        <div className={styles.btnContainer}>
+          <button
+            className={styles.btn}
+            onClick={() => onUpdateQuantity(item.id, -1)}
+          >
+            -
+          </button>
+          <button
+            className={styles.btn}
+            onClick={() => onUpdateQuantity(item.id, 1)}
+          >
+            +
+          </button>
         </div>
-        {isLow && <span> ⚠️ Low Stock!</span>}
       </div>
-      <p>Price: {item.price} €</p>
-      <button onClick={() => onDeleteItem(item.id)}>Delete Item</button>
+      {isLow && <span> ⚠️ Low Stock!</span>}
+      <p className={styles.text}>Price: {item.price} €</p>
+      <button className={styles.btn} onClick={() => onDeleteItem(item.id)}>
+        Delete Item
+      </button>
     </li>
   );
 }

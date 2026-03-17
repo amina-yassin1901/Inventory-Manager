@@ -6,10 +6,10 @@ function Header({ items }) {
 
   return (
     <header className={styles.header}>
-      <h1>Warehouse Dashboard</h1>
+      <h1 className={styles.title}>Warehouse Dashboard</h1>
 
-      <p>Total Products: {totalItems}</p>
-      <p>Total Quantity: {totalQuantity}</p>
+      <p className={styles.text}>Total Products: {totalItems}</p>
+      <p className={styles.text}>Total Quantity: {totalQuantity}</p>
     </header>
   );
 }

@@ -24,17 +24,24 @@ function AddItemForm({ onAddItem }) {
     reset();
   };
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <label>
+    <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+      <label className={styles.label}>
         {" "}
         Name:
-        <input type="text" {...register("name", { required: true })} />
+        <input
+          className={styles.item}
+          type="text"
+          {...register("name", { required: true })}
+        />
       </label>
       {errors.name && <span>This Field id required</span>}
-      <label>
+      <label className={styles.label}>
         {" "}
         Category
-        <select {...register("category", { required: true })}>
+        <select
+          className={styles.item}
+          {...register("category", { required: true })}
+        >
           <option value="">Select a category</option>
           <option value="Электроника">Electronics</option>
           <option value="Мебель">Furniture</option>
@@ -42,25 +49,29 @@ function AddItemForm({ onAddItem }) {
         </select>
       </label>
       {errors.category && <span>This Field id required</span>}
-      <label>
+      <label className={styles.label}>
         {" "}
         Quantity:
         <input
+          className={styles.item}
           type="number"
           {...register("quantity", { required: true, min: 1 })}
         />
       </label>
       {errors.quantity && <span>This Field id required</span>}
-      <label>
+      <label className={styles.label}>
         {" "}
         Price:
         <input
+          className={styles.item}
           type="number"
           {...register("price", { required: true, min: 1 })}
         />
       </label>
       {errors.price && <span>This Field id required</span>}
-      <button type="submit">Add Item</button>
+      <button className={styles.btn} type="submit">
+        Add Item
+      </button>
     </form>
   );
 }

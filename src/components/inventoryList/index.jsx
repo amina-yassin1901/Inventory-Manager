@@ -4,9 +4,9 @@ function InventoryList({ itemsList, onDeleteItem, onUpdateQuantity }) {
   return (
     <div>
       {itemsList.length === 0 ? (
-        <p>Items List is empty</p>
+        <p className={styles.text}>Items List is empty</p>
       ) : (
-        <ul>
+        <ul className={styles.list}>
           {itemsList.map((item) => {
             return (
               <InventoryItem
