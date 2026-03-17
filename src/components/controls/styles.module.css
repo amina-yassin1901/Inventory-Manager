@@ -1,0 +1,28 @@
+.controlsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.controlsContainer button {
+  padding: 8px 16px;
+  background-color: #2d89ef;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.controlsContainer button:hover {
+  background-color: #1b5fab;
+}
+
+.controlsContainer input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
